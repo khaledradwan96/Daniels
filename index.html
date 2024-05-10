@@ -20,19 +20,17 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
 
     <!-- ================ NavBar ================  -->
-    <nav class="navbar navbar-expand-md position-fixed w-100 z-2 " id="navbar">
+    <nav class="navbar navbar-expand-md bg-white position-fixed w-100 z-2 shadow-sm" id="navbar">
         <div class="container">
             <a class="navbar-brand logo" href="#">Daniels</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span>
-                    <i class="fa-solid fa-bars text-white"></i>
-                </span>
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+            <div class="collapse navbar-collapse flex-grow-0 " id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#home">Home</a>
@@ -66,6 +64,81 @@
         </div>
     </header>
 
+    <!-- ================ about ================  -->
+    <section id="about" class="bg-white"></section>
+
+    <!-- ================ services ================  -->
+    <section id="services"></section>
+
+    <!-- ================ works ================  -->
+    <section id="works"></section>
+
+    <!-- ================ client ================  -->
+    <section id="client"></section>
+
+    <!-- ================ team ================  -->
+    <section id="team"></section>
+
+    <!-- ================ contact ================  -->
+    <section id="contact"></section>
+
+    <!-- ================ Footer ==============  -->
+    <footer class="py-5">
+        <div class="text-white text-center">
+            <p>Copy right 2018 ©
+                <a href="https://routeegy.github.io/Daniels" target="_blank">By Daniels.</a>
+                All Rights Reserved
+            </p>
+            <p>Coding by <strong>Khaled Radwan</strong>
+                <span>
+                    <i class="fa-regular fa-calendar"></i>
+                    May 2024
+                </span>
+            </p>
+            <ul class="social list-inline">
+                <li class="list-inline-item">
+                    <span class="fa-stack">
+                        <a href="https://www.facebook.com/khaldradwan96/" target="_blank">
+                            <i class="fa-solid fa-circle fa-stack-2x"></i>
+                            <i class="fa-brands fa-facebook-f fa-stack-1x fa-inverse"></i>
+                        </a>
+                    </span>
+                </li>
+                <li class="list-inline-item">
+                    <span class="fa-stack">
+                        <a href="https://twitter.com/khaledradwan96" target="_blank">
+                            <i class="fa-solid fa-circle fa-stack-2x"></i>
+                            <i class="fa-brands fa-twitter fa-stack-1x fa-inverse"></i>
+                        </a>
+                    </span>
+                </li>
+                <li class="list-inline-item">
+                    <span class="fa-stack">
+                        <a href="https://www.linkedin.com/in/khaledradwan96" target="_blank">
+                            <i class="fa-solid fa-circle fa-stack-2x"></i>
+                            <i class="fa-brands fa-linkedin fa-stack-1x fa-inverse"></i>
+                        </a>
+                    </span>
+                </li>
+                <li class="list-inline-item">
+                    <span class="fa-stack">
+                        <a href="https://www.linkedin.com/in/khaledradwan96" target="_blank">
+                            <i class="fa-solid fa-circle fa-stack-2x"></i>
+                            <i class="fa-brands fa-github fa-stack-1x fa-inverse"></i>
+                        </a>
+                    </span>
+                </li>
+                <li class="list-inline-item">
+                    <span class="fa-stack">
+                        <a href="https://github.com/khaledradwan96" target="_blank">
+                            <i class="fa-solid fa-circle fa-stack-2x"></i>
+                            <i class="fa-brands fa-github fa-stack-1x fa-inverse"></i>
+                        </a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>

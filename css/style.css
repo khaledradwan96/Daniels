@@ -8,6 +8,7 @@
 
   /* Colors */
   --color-black: #343434;
+  --hover-color: #1c1c1c;
   --bg-color: #f7f7f7;
 }
 
@@ -42,47 +43,28 @@ section {
 }
 
 /* ================ Nav bar ================ */
-.navbar {
-  padding: 20px 0 30px;
-}
 nav .logo {
   float: left;
   font-size: 18px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #fff;
-  --bs-navbar-brand-hover-color: #fff;
 }
 nav .nav-link {
-  --bs-nav-link-color: #fff;
-  --bs-nav-link-hover-color: #fff;
-  --bs-navbar-active-color: #fff;
-}
-nav .nav-link.active {
   position: relative;
 }
-nav .nav-link.active::after {
+nav .nav-link::after {
   content: "";
-  width: calc(100% - 16px);
+  width: 0;
   height: 2px;
-  background: #fff;
+  background-color: #000;
   position: absolute;
   bottom: 8px;
   left: 8px;
-  transition: all 0.5s;
+  transition: width 0.5s;
 }
-nav .show {
-  background-color: #fff;
-  width: 100%;
-  text-align: center;
-  padding: 20px;
-}
-nav .show .nav-link,
-nav .show .nav-link.active {
-  --bs-nav-link-color: #000;
-  --bs-nav-link-hover-color: #000;
-  --bs-navbar-active-color: #000;
+nav .nav-link.active::after {
+  width: calc(100% - 16px);
 }
 
 /* ================ header ================ */
@@ -273,4 +255,15 @@ header .social a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* ================ Footer ================ */
+footer {
+  background-color: var(--hover-color);
+}
+footer p {
+  margin-bottom: 0.5rem;
+}
+footer .fa-circle {
+  color: #313131;
 }
