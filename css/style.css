@@ -37,11 +37,20 @@ img {
 a {
   text-decoration: none;
 }
+p {
+  line-height: 1.6;
+  margin: 0;
+  font-size: 15px;
+  color: #748182;
+}
 section {
   padding: 5rem 0;
   position: relative;
 }
-
+.btn-dark {
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: transparent;
+}
 /* ================ Nav bar ================ */
 nav .logo {
   float: left;
@@ -255,6 +264,57 @@ header .social a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* ================ About ================ */
+#about figure::after {
+  content: "";
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: -30px;
+  bottom: -30px;
+  background-image: url("../images/dots.png");
+  background-repeat: repeat;
+  z-index: 1;
+}
+#about .content p:first-of-type {
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+/* skills-progress */
+#about .skills-progress {
+  width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+  position: relative;
+}
+#about .skills-progress h6 {
+  color: #fff;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+#about .skills-progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 5px;
+  background-color: var(--hover-color);
+  transition: all 1s;
+}
+#about .skills-progress span::after {
+  content: attr(data-value);
+  position: absolute;
+  right: 6px;
+  top: 5px;
+  color: #fff;
 }
 
 /* ================ Footer ================ */
