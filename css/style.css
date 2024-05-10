@@ -40,3 +40,194 @@ section {
   padding: 5rem 0;
   position: relative;
 }
+
+/* ================ header ================ */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("../images/bg.jpg");
+  background-size: cover;
+}
+
+header h5 {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+header h1 {
+  color: #fff;
+  font-weight: 200;
+}
+/* typing words */
+header h1 span::before {
+  content: "";
+  position: relative;
+  font-weight: 500;
+  animation: typing 10s infinite;
+}
+@keyframes typing {
+  /* Larry Daniels */
+  0% {
+    content: "";
+  }
+  2% {
+    content: "La";
+  }
+  4% {
+    content: "Larr";
+  }
+  6% {
+    content: "Larry";
+  }
+  8% {
+    content: "Larry D";
+  }
+  10% {
+    content: "Larry Dan";
+  }
+  12% {
+    content: "Larry Danie";
+  }
+  14% {
+    content: "Larry Daniels";
+  }
+  20% {
+    content: "Larry Daniels";
+  }
+  22% {
+    content: "Larry Danie";
+  }
+  24% {
+    content: "Larry Dan";
+  }
+  26% {
+    content: "Larry D";
+  }
+  28% {
+    content: "Larr";
+  }
+  30% {
+    content: "La";
+  }
+  32% {
+    content: "";
+  }
+  /* Developer */
+  34% {
+    content: "D";
+  }
+  36% {
+    content: "De";
+  }
+  38% {
+    content: "Dev";
+  }
+  40% {
+    content: "Deve";
+  }
+  42% {
+    content: "Devel";
+  }
+  44% {
+    content: "Develo";
+  }
+  46% {
+    content: "Develop";
+  }
+  48% {
+    content: "Develope";
+  }
+  50% {
+    content: "Developer";
+  }
+  52% {
+    content: "Developer";
+  }
+  54% {
+    content: "Develope";
+  }
+  54% {
+    content: "Develop";
+  }
+  56% {
+    content: "Develo";
+  }
+  58% {
+    content: "Devel";
+  }
+  60% {
+    content: "Deve";
+  }
+  62% {
+    content: "Dev";
+  }
+  64% {
+    content: "De";
+  }
+  68% {
+    content: "D";
+  }
+  70% {
+    content: "";
+  }
+  /* Designer */
+  72% {
+    content: "De";
+  }
+  74% {
+    content: "Desi";
+  }
+  76% {
+    content: "Desig";
+  }
+  78% {
+    content: "Design";
+  }
+  80% {
+    content: "Designe";
+  }
+  82% {
+    content: "Designer";
+  }
+  84% {
+    content: "Designer";
+  }
+  86% {
+    content: "Design";
+  }
+  88% {
+    content: "Desig";
+  }
+  90% {
+    content: "Desi";
+  }
+  92% {
+    content: "Des";
+  }
+  94% {
+    content: "De";
+  }
+  96% {
+    content: "D";
+  }
+  98% {
+    content: "";
+  }
+  100% {
+    content: "";
+  }
+}
+header .social a {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
