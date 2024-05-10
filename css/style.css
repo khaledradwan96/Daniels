@@ -41,6 +41,50 @@ section {
   position: relative;
 }
 
+/* ================ Nav bar ================ */
+.navbar {
+  padding: 20px 0 30px;
+}
+nav .logo {
+  float: left;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  --bs-navbar-brand-hover-color: #fff;
+}
+nav .nav-link {
+  --bs-nav-link-color: #fff;
+  --bs-nav-link-hover-color: #fff;
+  --bs-navbar-active-color: #fff;
+}
+nav .nav-link.active {
+  position: relative;
+}
+nav .nav-link.active::after {
+  content: "";
+  width: calc(100% - 16px);
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  transition: all 0.5s;
+}
+nav .show {
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+nav .show .nav-link,
+nav .show .nav-link.active {
+  --bs-nav-link-color: #000;
+  --bs-nav-link-hover-color: #000;
+  --bs-navbar-active-color: #000;
+}
+
 /* ================ header ================ */
 header {
   display: flex;
@@ -51,7 +95,6 @@ header {
     url("../images/bg.jpg");
   background-size: cover;
 }
-
 header h5 {
   color: #fff;
   font-size: 50px;
