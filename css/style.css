@@ -1,0 +1,42 @@
+/* ================ global styles ================ */
+:root {
+  scroll-padding-top: 56px;
+
+  /* fonts */
+  --font-default: "Poppins", sans-serif;
+  --font-heading: "Montserrat", sans-serif;
+
+  /* Colors */
+  --color-black: #343434;
+  --bg-color: #f7f7f7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--font-default);
+  background-color: var(--bg-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-black);
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+section {
+  padding: 5rem 0;
+  position: relative;
+}
