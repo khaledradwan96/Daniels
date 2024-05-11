@@ -507,6 +507,38 @@ header .social a {
   transform: rotateY(0deg) scale(1);
 }
 
+/* ================ Contact Us ================ */
+#contact .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contact .item i {
+  background-color: var(--bg-color);
+  font-size: 25px;
+  margin-bottom: 15px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+#contact .item:hover i {
+  background-color: var(--hover-color);
+  color: #fff;
+}
+/* form */
+#contact form {
+  --bs-body-bg: #f4f4f4;
+}
+#contact input:focus,
+#contact textarea:focus {
+  box-shadow: none;
+  border-color: var(--hover-color);
+}
+
 /* ================ Footer ================ */
 footer {
   background-color: var(--hover-color);
@@ -516,4 +548,14 @@ footer p {
 }
 footer .fa-circle {
   color: #313131;
+  transition: 0.3s;
+}
+footer .fa-brands {
+  transition: 0.3s;
+}
+footer .fa-stack:hover .fa-brands {
+  color: #000;
+}
+footer .fa-stack:hover .fa-circle {
+  color: #fff;
 }
