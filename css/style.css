@@ -48,7 +48,7 @@ section {
   position: relative;
 }
 /* ================ Main Compound ================ */
-/* main-title */
+/* ===== main-title ===== */
 .main-title {
   margin-bottom: 80px;
   text-align: center;
@@ -71,11 +71,52 @@ section {
   left: 0;
   z-index: -1;
 }
-/* btn-dark */
+/* ===== btn-dark ===== */
 .btn-dark {
   --bs-btn-hover-color: #000;
   --bs-btn-hover-bg: transparent;
 }
+/* ===== Loading Screen ===== */
+.loading-screen {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: 0;
+  animation: screen 2s linear;
+}
+@keyframes screen {
+  0%,
+  70% {
+    opacity: 1;
+    z-index: 10;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+.loading-screen .loading-icon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 20px solid #ccc;
+  border-top-color: #000;
+  animation: loading 1s infinite;
+}
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* ================ Nav bar ================ */
 nav .logo {
   float: left;
@@ -110,6 +151,9 @@ header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
     url("../images/bg.jpg");
   background-size: cover;
+  overflow: hidden;
+  background-position: center center;
+  background-attachment: fixed;
 }
 header h5 {
   color: #fff;
@@ -376,15 +420,16 @@ header .social a {
   --bs-nav-link-color: #000;
   --bs-nav-link-hover-color: #000;
   position: relative;
+  font-weight: 700;
 }
 #works .nav-pills .nav-link::after {
   content: "";
   width: 0;
-  height: 2px;
+  height: 3px;
   background-color: #111;
   position: absolute;
   left: 16px;
-  bottom: 0px;
+  bottom: 5px;
   transition: all 0.4s;
 }
 #works .nav-pills .nav-link.active::after {
@@ -458,21 +503,29 @@ header .social a {
   border: none;
   transition: all 0.5s;
 }
-#client button.active {
+#client button.active,
+#client button:hover {
   opacity: 1;
+}
+
+/* ================ Numbers ================ */
+#number h3 {
+  font-weight: 900;
+  margin-top: 1rem;
 }
 
 /* ================ Team ================ */
 #team .item-img img {
-  transition: all 0.4s ease 0s;
+  transition: all 0.4s ease;
 }
-#team .item:hover img {
+#team .item-img:hover img {
   transform: scale(1.2);
 }
 #team .item-text {
   padding: 25px;
   background-color: #5b5b5b;
   text-align: center;
+  border-radius: 0 0 6px 6px;
 }
 /* overlay and icon */
 #team .overlay {
@@ -487,16 +540,13 @@ header .social a {
   transition: all 0.5s;
   z-index: 2;
   transform: rotateY(180deg) scale(0.5);
-}
-#team .overlay .social {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #team .overlay .btn-dark {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: inline-flex;
   justify-content: center;
