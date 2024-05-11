@@ -462,6 +462,51 @@ header .social a {
   opacity: 1;
 }
 
+/* ================ Team ================ */
+#team .item-img img {
+  transition: all 0.4s ease 0s;
+}
+#team .item:hover img {
+  transform: scale(1.2);
+}
+#team .item-text {
+  padding: 25px;
+  background-color: #5b5b5b;
+  text-align: center;
+}
+/* overlay and icon */
+#team .overlay {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: 2;
+  transform: rotateY(180deg) scale(0.5);
+}
+#team .overlay .social {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#team .overlay .btn-dark {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+#team .item:hover .overlay {
+  opacity: 1;
+  transform: rotateY(0deg) scale(1);
+}
+
 /* ================ Footer ================ */
 footer {
   background-color: var(--hover-color);
