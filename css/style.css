@@ -116,6 +116,53 @@ section {
     transform: rotate(360deg);
   }
 }
+/* ===== scroll-up-btn ===== */
+.scroll-up-btn {
+  background-color: #000;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 6px;
+  animation: shown 1s;
+  animation-timeline: view();
+  animation-range: 10% 20%;
+  animation-fill-mode: both;
+}
+@keyframes shown {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.scroll-up-btn:hover i {
+  animation: bounce 1s infinite;
+}
+@keyframes bounce {
+  0%,
+  20%,
+  53%,
+  80%,
+  to {
+    transform: translateY(0px);
+  }
+  40%,
+  43% {
+    transform: translateY(-10px);
+  }
+  70% {
+    transform: translateY(-5px);
+  }
+  90% {
+    transform: translateY(-1px);
+  }
+}
 
 /* ================ Nav bar ================ */
 nav .logo {
@@ -165,7 +212,7 @@ header h1 {
   color: #fff;
   font-weight: 200;
 }
-/* typing words */
+/* ===== typing words ===== */
 header h1 span::before {
   content: "";
   position: relative;
@@ -353,7 +400,7 @@ header .social a {
   letter-spacing: 2px;
   margin-bottom: 20px;
 }
-/* skills-progress */
+/* ===== skills-progress ===== */
 #about .skills-progress {
   width: 100%;
   padding: 5px 10px;
@@ -413,7 +460,7 @@ header .social a {
 }
 
 /* ================ works (Portfolio) ================ */
-/* nav */
+/* ===== nav ===== */
 #works .nav-pills .nav-link {
   --bs-nav-pills-link-active-bg: #fff;
   --bs-nav-pills-link-active-color: #000;
@@ -435,7 +482,7 @@ header .social a {
 #works .nav-pills .nav-link.active::after {
   width: calc(100% - 16px * 2);
 }
-/* overlay and icon */
+/* ===== overlay and icon ===== */
 #works .overlay {
   position: absolute;
   top: 5px;
